@@ -9,6 +9,8 @@ import { ViewUsersIdOrdersComponent } from './views/view-users-id-orders/view-us
 import { ViewUsersIdFavsComponent } from './views/view-users-id-favs/view-users-id-favs.component';
 import { ViewUsersIdEditComponent } from './views/view-users-id-edit/view-users-id-edit.component';
 import { ViewUsersIdOrdersIdComponent } from './views/view-users-id-orders-id/view-users-id-orders-id.component';
+import { RouterModule } from '@angular/router';
+import { RouterTestingModule } from '@angular/router/testing';
 
 
 
@@ -25,7 +27,9 @@ import { ViewUsersIdOrdersIdComponent } from './views/view-users-id-orders-id/vi
     ViewUsersIdOrdersIdComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    RouterTestingModule
   ]
 })
 export class UsersModule { }

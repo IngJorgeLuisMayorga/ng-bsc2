@@ -16,10 +16,10 @@ export class HomeComponent implements OnInit{
     }
   ];
 
-  constructor(private $auth: AuthService){}
+  constructor(){}
 
   ngOnInit(): void {
-    this.$auth.mockLogin('RoleAdmin');
+    //this.$auth.mockLogin('RoleAdmin');
   }
 
 }

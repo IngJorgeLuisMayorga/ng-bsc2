@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ProductsRoutingModule } from './products.routing';
 import { ProductsComponent } from './products.component';
@@ -10,8 +11,6 @@ import { ViewProductsAdminEditIdComponent } from './views/view-products-admin-ed
 import { ViewProductsCategoryIdComponent } from './views/view-products-category-id/view-products-category-id.component';
 import { ViewProductsAdminStatsComponent } from './views/view-products-admin-stats/view-products-admin-stats.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-
-
 
 @NgModule({
   declarations: [
@@ -26,6 +25,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     ProductsRoutingModule,
     SharedModule
   ]
