@@ -1,0 +1,17 @@
+<div class="page">
+    <header class="page-header">
+        <app-header-ads></app-header-ads>
+        <app-header-navbar></app-header-navbar>
+        <app-header-admin></app-header-admin>
+    </header>
+    <nav class="page-sidebar">
+        <app-sidebar-cart></app-sidebar-cart>
+    </nav>
+    <div class="page-container">
+        <app-breadcrumbs></app-breadcrumbs>
+        <ng-content select="main"></ng-content>
+    </div>
+    <footer class="page-footer">
+        <app-footer></app-footer>
+    </footer>
+</div>
