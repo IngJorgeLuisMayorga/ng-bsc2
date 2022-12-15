@@ -1,0 +1,32 @@
+@import '../abstracts/variables';
+@import '../abstracts/fonts';
+@import '../abstracts/colors';
+@import '../abstracts/breakpoints';
+
+// Headers
+
+.header{
+
+    //display
+    display: block;
+
+    //Box
+    width: 100%;
+    height: $header-h;
+    padding: $header-padding;
+    margin: 0px;
+
+    //Position
+    position: sticky;
+    box-sizing: border-box;
+
+    //Fonts
+    @include font-default;
+    @include font-xl;
+    @include font-space-l;
+
+    //Colors
+    color: $color-black;
+    background-color: $color-white;
+
+}

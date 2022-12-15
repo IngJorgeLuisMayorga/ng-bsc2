@@ -1,17 +1,5 @@
 @import "colors";
 
-@font-face {
-  font-family: "Helvetica";
-  src: url(../../assets/fonts/Helvetica.ttf);
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Helvetica";
-  src: url(../../assets/fonts/Helvetica-Bold.ttf);
-  font-weight: bold;
-}
-
 @mixin font-default {
   font-family: "Helvetica";
   font-size: 14px;
@@ -32,14 +20,19 @@
 }
 
 @mixin font-space-xs {
+  letter-spacing: 0px;
 }
 @mixin font-space-s {
+  letter-spacing: 1px;
 }
 @mixin font-space-m {
+  letter-spacing: 2px;
 }
 @mixin font-space-l {
+  letter-spacing: 3px;
 }
 @mixin font-space-xl {
+  letter-spacing: 4px;
 }
 
 .font-title {

@@ -10,6 +10,7 @@ import { HeaderNavbarComponent } from './components/header-navbar/header-navbar.
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarCartComponent } from './components/sidebar-cart/sidebar-cart.component';
+import { ImgHoverComponent } from './components/img-hover/img-hover.component';
 
 
 const COMPONENTS = [
@@ -22,7 +23,8 @@ const COMPONENTS = [
   HeaderNavbarComponent,
   BreadcrumbsComponent,
   FooterComponent,
-  SidebarCartComponent
+  SidebarCartComponent,
+  ImgHoverComponent
 ];
 
 @NgModule({

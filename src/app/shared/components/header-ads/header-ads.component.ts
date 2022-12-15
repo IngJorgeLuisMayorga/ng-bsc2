@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HeaderAdsComponent {
 
+  public caption = '';
+  public normal = '../../../../assets/icons/header-ads/caritaporcentaje_BSC.png';
+  public hover = '../../../../assets/icons/header-ads/caritaporcentaje_BSC_hover.png';
 }

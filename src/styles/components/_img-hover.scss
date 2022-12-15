@@ -1,0 +1,42 @@
+.img-hover{
+    display: block;
+    position: relative;
+    height: 100%;
+    width: auto;
+}
+.img-hover img{
+    height: 100%;
+    width: auto;
+}
+.img-hover .normal{
+    position: absolute;
+    opacity: 1;
+    top: 0px;
+    left: 0px;
+    //Animation
+    transition: opacity 0.3s;
+}
+.img-hover .hover{
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    //Animation
+    transition: opacity 0.3s;
+}
+.img-hover:hover .normal{
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    //Animation
+    transition: opacity 0.3s;
+}
+.img-hover:hover .hover{
+    position: absolute;
+    opacity: 1;
+    top: 0px;
+    left: 0px;
+    //Animation
+    transition: opacity 0.3s;
+}
