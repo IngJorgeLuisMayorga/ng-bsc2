@@ -111,6 +111,17 @@
   }
 }
 
+.header-navbar__button{
+  position: relative;
+  margin-right: $header-bsc-margin-right;
+}
+.header-navbar__button .icon{
+  position: relative;
+}
+.header-navbar__button .badge{
+  position: absolute;
+}
+
 app-img-hover {
   display: block;
   position: relative;
@@ -121,3 +132,4 @@ app-img-hover {
     margin-right: 0px;
   }
 }
+

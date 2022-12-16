@@ -16,12 +16,19 @@
   </div>
   <div class="header-navbar__buttons">
       <img [src]="bsc"/>
-      <app-img-hover *ngFor="let button of buttons"
-        (click)="button.method()"
-        [caption]="button.icons.alt"
-        [normal]="button.icons.normal"
-        [hover]="button.icons.hover">
-      </app-img-hover>
+      <div class="header-navbar__button" *ngFor="let button of buttons">
+
+            <app-img-hover
+              (click)="button.method()"
+              [caption]="button.icons.alt"
+              [normal]="button.icons.normal"
+              [hover]="button.icons.hover">
+            </app-img-hover>
+
+            <div class="badge" *ngIf="getBadge(button, ($notifications | async)) > 0">
+              <span>{{ getBadge(button, ($notifications | async))  }}</span>
+            </div>
+      </div>
   </div>
 </div>
 

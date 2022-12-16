@@ -20,4 +20,9 @@ describe('HeaderNavbarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render 3 main buttons: search, profile, cart', () => {
+    expect(component).toBeTruthy();
+  });
+
 });

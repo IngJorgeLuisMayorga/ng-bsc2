@@ -1,4 +1,5 @@
 @import "colors";
+@import "variables";
 
 @mixin font-default {
   font-family: "Helvetica";
@@ -9,10 +10,13 @@
 }
 
 @mixin font-xs {
+  font-size: $f-size-xs;
 }
 @mixin font-s {
+  font-size: $f-size-s;
 }
 @mixin font-m {
+  font-size: $f-size-m;
 }
 @mixin font-l {
 }
