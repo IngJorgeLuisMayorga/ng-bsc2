@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'styles/abstracts/fonts';
 
 // Vendors
 @import 'styles/vendors/reset';
@@ -6,6 +7,14 @@
 // Theme
 @import 'styles/theme/fonts';
 
+// Layout
+@import 'styles/layout/page';
+
 // Componets
 @import 'styles/components/header';
 @import 'styles/components/img-hover';
+
+
+body {
+    @include font-default;
+}

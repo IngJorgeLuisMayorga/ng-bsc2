@@ -14,7 +14,9 @@
     width: 100%;
     height: $header-h;
     padding: $header-padding;
+    padding-left: 0px;
     margin: 0px;
+    z-index: $header-z;
 
     //Position
     position: sticky;
@@ -29,4 +31,21 @@
     color: $color-black;
     background-color: $color-white;
 
+}
+
+.header-ads{
+    z-index: $header-ads-z;
+}
+
+.header-navbar{
+
+    // display
+
+    // box
+    width: 100%;
+    max-width: $container-w;
+    margin: 0 auto;
+
+    background-color: $header-bg;
+    z-index: $header-z;
 }

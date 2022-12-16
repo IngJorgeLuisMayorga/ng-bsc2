@@ -11,6 +11,7 @@ import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.compo
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarCartComponent } from './components/sidebar-cart/sidebar-cart.component';
 import { ImgHoverComponent } from './components/img-hover/img-hover.component';
+import { RouterModule } from '@angular/router';
 
 
 const COMPONENTS = [
@@ -35,7 +36,8 @@ const COMPONENTS = [
     ...COMPONENTS
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
 })
 export class SharedModule { }

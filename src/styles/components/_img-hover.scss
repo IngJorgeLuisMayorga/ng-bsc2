@@ -1,3 +1,5 @@
+$transition-img-hover__time-s : 0.1s;
+
 .img-hover{
     display: block;
     position: relative;
@@ -14,7 +16,7 @@
     top: 0px;
     left: 0px;
     //Animation
-    transition: opacity 0.3s;
+    transition: opacity $transition-img-hover__time-s;
 }
 .img-hover .hover{
     position: absolute;
@@ -22,7 +24,7 @@
     top: 0px;
     left: 0px;
     //Animation
-    transition: opacity 0.3s;
+    transition: opacity $transition-img-hover__time-s;
 }
 .img-hover:hover .normal{
     position: absolute;
@@ -30,7 +32,7 @@
     top: 0px;
     left: 0px;
     //Animation
-    transition: opacity 0.3s;
+    transition: opacity $transition-img-hover__time-s;
 }
 .img-hover:hover .hover{
     position: absolute;
@@ -38,5 +40,5 @@
     top: 0px;
     left: 0px;
     //Animation
-    transition: opacity 0.3s;
+    transition: opacity $transition-img-hover__time-s;
 }

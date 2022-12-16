@@ -1,0 +1,33 @@
+<div class="header header-navbar desktop">
+  <div class="header-navbar__waves">
+    <img [src]="waves"/>
+  </div>
+  <div class="header-navbar__menus">
+    <div class="header-navbar__menu" *ngFor="let menu of menus">
+      <div class="menu__title">
+        <label> {{ menu.title }}</label>
+      </div>
+      <ul class="menu__links">
+        <li class="menu__link" *ngFor="let item of menu.items">
+          <a [routerLink]="item.link"> {{ item.label }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="header-navbar__buttons">
+      <img [src]="bsc"/>
+      <app-img-hover *ngFor="let button of buttons"
+        (click)="button.method()"
+        [caption]="button.icons.alt"
+        [normal]="button.icons.normal"
+        [hover]="button.icons.hover">
+      </app-img-hover>
+  </div>
+</div>
+
+
+
+<div *ngIf="false" class="header header-navbar mobile">
+  <div class="section-menus"></div>
+  <div class="section-buttons"></div>
+</div>

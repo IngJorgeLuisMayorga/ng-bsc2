@@ -1,0 +1,123 @@
+@import "../../../../styles/abstracts/variables";
+@import "../../../../styles/abstracts/colors";
+
+.header-navbar {
+  // display
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header-navbar__waves {
+  // display
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  img {
+    width: $header-waves-w;
+  }
+}
+
+.header-navbar__menus {
+  // display
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin-left: $header-menus-margin-left;
+}
+
+.header-navbar__menu {
+  display: block;
+  position: relative;
+}
+
+.menu__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: $header-ads-z;
+
+  height: $header-h;
+  width: $header-menu-w;
+
+  font-weight: $font-bold;
+  background-color: $header-bg;
+
+  cursor: pointer;
+  & label{
+    cursor: pointer;
+  }
+}
+
+.menu__links {
+  position: absolute;
+  opacity: 0;
+  height: 0%;
+  width: $header-menu-w;
+  top: $header-menu-links-top;
+  z-index: -1 ;
+}
+
+.header-navbar__menu:hover .menu__links {
+  opacity: 1;
+  top: $header-h;
+  height: 100%;
+  transition: all ease-in-out 0.5s;
+}
+
+.menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: $header-menu-h;
+
+  position: relative;
+  background-color: $header-bg;
+  a{
+    text-decoration: none;
+    color: $color-black;
+  }
+
+  &:hover{
+    color: $color-black;
+    background-color: $color-pink;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}
+
+.menu__link a {
+  position: relative;
+}
+
+.header-navbar__buttons {
+  // display
+  flex: 1 1 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  // cursor
+  cursor: pointer;
+
+  img {
+    width: $header-bsc-w;
+    margin-right: $header-bsc-margin-right;
+  }
+}
+
+app-img-hover {
+  display: block;
+  position: relative;
+  width: $header-buttons-icons-w;
+  height: $header-buttons-icons-h;
+  margin-right: $header-bsc-margin-right;
+  &:last-child {
+    margin-right: 0px;
+  }
+}

@@ -1,5 +1,16 @@
-.page{}
-.page-header{}
+@import '../abstracts/variables';
+
+.page{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+.page-header{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    background-color: $header-bg;
+}
 .page-sidebar{}
 .page-container{}
 .page-footer{}

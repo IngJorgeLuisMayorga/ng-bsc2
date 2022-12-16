@@ -1,4 +1,30 @@
+@import './colors';
+
+// fonts
+$font-bold: 900;
+
+// container
+$container-w: 2000px;
 
 // Headers
 $header-h : 45px;
+$header-z : 0;
+$header-ads-z : 2;
+$header-nav-z : 1;
+$header-bg: $color-pink;
 $header-padding: 12px;
+
+// Headers Components
+$header-waves-w: 60px;
+
+$header-bsc-w: 52px;
+$header-bsc-margin-right: 12px;
+
+$header-menu-w: 200px;
+$header-menu-h: $header-h;
+$header-menus-margin-left: 60px;
+
+$header-buttons-icons-w: 26px;
+$header-buttons-icons-h: 26px;
+
+$header-menu-links-top: (-500px);
