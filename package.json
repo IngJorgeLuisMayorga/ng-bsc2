@@ -9,12 +9,10 @@
     "test": "ng test --browsers ChromeHeadless --watch=false",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
-
     "start:local": "ng serve -c=local --port=5201",
     "start:dev": "ng serve -c=dev --port=5202",
     "start:qa": "ng serve -c=qa --port=5203",
     "start:prod": "ng serve -c=prod --port=5204"
-
   },
   "private": true,
   "dependencies": {
