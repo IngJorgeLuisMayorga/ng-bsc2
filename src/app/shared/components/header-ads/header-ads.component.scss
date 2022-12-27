@@ -10,7 +10,7 @@
 
   //Fonts
   @include font-default;
-  @include font-xl;
+  @include font-m;
   @include font-space-l;
 
   //Colors
@@ -27,7 +27,6 @@
     transition: 0.3s;
   }
 }
-
 .header-ads div {
   display: flex;
   align-items: center;
@@ -62,4 +61,16 @@
 .header-ads:hover .hover {
   opacity: 1;
   display: block;
+}
+
+@media (max-width: 1200px) {
+  .header-ads {
+    //Fonts
+    @include font-s;
+
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1em;
+  }
 }
