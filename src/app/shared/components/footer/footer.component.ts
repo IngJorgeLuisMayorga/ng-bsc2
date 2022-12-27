@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import footerConfig from '../../config/footer.config';
+import footerConfig, { IColor } from '../../config/footer.config';
+
+
+
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -11,5 +14,9 @@ export class FooterComponent {
   public menus = footerConfig.menus;
 
   public year = new Date().getFullYear();
+
+  public getHoverClass(color: IColor): string{
+    return `hover-color-${color}`;
+  }
 
 }

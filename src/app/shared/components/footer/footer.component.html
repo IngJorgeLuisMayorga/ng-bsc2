@@ -6,11 +6,7 @@
       <div
         *ngFor="let menu of menus"
         class="footer__column"
-        [ngClass]="{
-          'hover-color-pink': menu.color === 'pink',
-          'hover-color-blue': menu.color === 'blue',
-          'hover-color-yellow': menu.color === 'yellow'
-        }"
+        [ngClass]="getHoverClass(menu.color)"
       >
         <div class="footer__column__title hoverable">{{ menu.title }}</div>
         <div class="footer__column__links">
