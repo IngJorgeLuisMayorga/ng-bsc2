@@ -1,0 +1,14 @@
+@import "../abstracts/colors";
+
+.hover-color-pink .hoverable:hover {
+  cursor: pointer;
+  color: $color-pink;
+}
+.hover-color-blue .hoverable:hover {
+  cursor: pointer;
+  color: $color-blue;
+}
+.hover-color-yellow .hoverable:hover {
+  cursor: pointer;
+  color: $color-yellow;
+}

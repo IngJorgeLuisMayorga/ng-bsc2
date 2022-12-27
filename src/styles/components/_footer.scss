@@ -1,0 +1,29 @@
+@import "../abstracts/variables";
+@import "../abstracts/fonts";
+@import "../abstracts/colors";
+@import "../abstracts/breakpoints";
+
+.footer {
+  //display
+  display: block;
+  box-sizing: border-box;
+  z-index: $header-z;
+
+  //Box
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  margin: 0px auto;
+
+
+  //Position
+
+  //Fonts
+  @include font-default;
+  @include font-xl;
+  @include font-space-l;
+
+  //Colors
+  color: $color-white;
+  background-color: $color-black;
+}

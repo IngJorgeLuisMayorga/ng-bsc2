@@ -6,19 +6,25 @@
     @include font-xs;
 
     position: absolute;
-    top: -$f-size-xs;
-    right: 0;
-
-    padding: 1px 2px;
     border: 1px solid $color-black;
     border-radius: 100%;
 
     color: $color-white;
     background-color: $color-black;
+
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: -8px;
+    right: 0px;
+    padding: 0px;
 }
 
 .badge span{
     @include font-xs;
     color: $color-white;
     letter-spacing: 1px;
+    position: relative;
+    top: -4px;
+    right: -1px;
 }

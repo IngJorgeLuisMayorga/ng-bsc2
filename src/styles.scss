@@ -6,12 +6,14 @@
 
 // Theme
 @import 'styles/theme/fonts';
+@import 'styles/theme/hoverables';
 
 // Layout
 @import 'styles/layout/page';
 
 // Componets
 @import 'styles/components/header';
+@import 'styles/components/footer';
 @import 'styles/components/badge';
 @import 'styles/components/img-hover';
 
@@ -19,3 +21,4 @@
 body {
     @include font-default;
 }
+

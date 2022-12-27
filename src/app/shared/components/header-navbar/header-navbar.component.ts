@@ -1,9 +1,21 @@
 import { Component } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { map, Observable, of } from 'rxjs';
 const BASE = '../../../../assets/icons/header-navbar';
 
 export interface IHeaderNotification{
     name: string; count: number
+}
+
+export enum NotificationsNames {
+  CART = 'Carrito',
+  PROFILE = 'Perfil',
+  SEARCH = 'Buscar'
+
+}
+
+export const DefaultNotification: IHeaderNotification = {
+  name: '',
+  count: 0
 }
 
 @Component({
@@ -30,7 +42,7 @@ export class HeaderNavbarComponent {
 
   public buttons = [
     {
-      name: 'Buscar',
+      name: NotificationsNames.SEARCH,
       icons: {
         alt: 'Icono de lupa, click para buscar productos en nuestra tienda',
         normal: `${BASE}/header-icon-lupa.png`,
@@ -39,7 +51,7 @@ export class HeaderNavbarComponent {
       method: () => this.goToSearch(),
     },
     {
-      name: 'Profile',
+      name: NotificationsNames.PROFILE,
       icons: {
         alt: 'Icono de personas, click para ir a tu perfil o iniciar sesiòn si no estas registrado en nuestra tienda',
         normal: `${BASE}/header-icon-persona.png`,
@@ -48,7 +60,7 @@ export class HeaderNavbarComponent {
       method: () => this.goToProfile(),
     },
     {
-      name: 'Carrito',
+      name: NotificationsNames.CART,
       icons: {
         alt: 'Icono de carrito, click para ver los productos añadidos a carrito',
         normal: `${BASE}/header-icon-cart.png`,
@@ -59,12 +71,27 @@ export class HeaderNavbarComponent {
   ];
 
   public $notifications: Observable<IHeaderNotification[]>;
+  public $notificationsCart: Observable<IHeaderNotification>;
+  public $notificationsProfile: Observable<IHeaderNotification>;
+  public $notificationsSearch: Observable<IHeaderNotification>;
 
   constructor(){
     this.$notifications = of([{
-      name: 'Carrito',
+      name: NotificationsNames.CART,
       count: 10
-    }])
+    }]);
+    this.$notificationsCart = this.getNotificationObsByName(NotificationsNames.CART);
+    this.$notificationsProfile = this.getNotificationObsByName(NotificationsNames.PROFILE);
+    this.$notificationsSearch = this.getNotificationObsByName(NotificationsNames.SEARCH);
+  }
+
+  getNotificationObsByName(obsName: string): Observable<IHeaderNotification>{
+    return this.$notifications.pipe(
+      map(notifications => notifications.find(
+          item => String(item.name) === String(obsName)
+        ) || DefaultNotification
+      )
+    );
   }
 
   goToSearch() {

@@ -9,6 +9,9 @@
   line-height: 120%;
 }
 
+@mixin font-xxs {
+  font-size: $f-size-xxs;
+}
 @mixin font-xs {
   font-size: $f-size-xs;
 }
@@ -19,8 +22,10 @@
   font-size: $f-size-m;
 }
 @mixin font-l {
+  font-size: $f-size-l;
 }
 @mixin font-xl {
+  font-size: $f-size-xl;
 }
 
 @mixin font-space-xs {
@@ -39,6 +44,15 @@
   letter-spacing: 4px;
 }
 
+@mixin font-bold {
+  font-weight: 600;
+}
+
+.font-super-title {
+  @include font-default;
+  @include font-xl;
+  @include font-space-l;
+}
 .font-title {
   @include font-default;
   @include font-xl;

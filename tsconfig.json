@@ -22,7 +22,12 @@
       "es2020",
       "dom"
     ],
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "paths":{
+      "@auth/*":["src/app/modules/auth/*"],
+      "@icons/*":["src/assets/icons/*"],
+      "@shared/*":["src/app/shared/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

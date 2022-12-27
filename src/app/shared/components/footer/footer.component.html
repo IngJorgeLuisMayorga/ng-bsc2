@@ -1,1 +1,80 @@
-<p>footer works!</p>
+<div class="footer">
+  <div class="footer__container">
+    <div class="footer__title">{{ title }}</div>
+
+    <div class="footer__columns">
+      <div
+        *ngFor="let menu of menus"
+        class="footer__column"
+        [ngClass]="{
+          'hover-color-pink': menu.color === 'pink',
+          'hover-color-blue': menu.color === 'blue',
+          'hover-color-yellow': menu.color === 'yellow'
+        }"
+      >
+        <div class="footer__column__title hoverable">{{ menu.title }}</div>
+        <div class="footer__column__links">
+          <ng-container *ngFor="let item of menu.items">
+            <a class="footer__column__link hoverable" href="{{ item.path }}">{{
+              item.label
+            }}</a>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer_logo">
+        <app-img-hover
+          [hover]="'../../../../assets/icons/footer-socials/LOGO ROSADO.png'"
+          [normal]="'../../../../assets/icons/footer-socials/LOGO BLANCO.png'"
+          [caption]="title"
+        ></app-img-hover>
+      </div>
+      <div class="footer_social">
+        <div class="footer_social--instagram">
+          <app-img-hover
+            [normal]="
+              '../../../../assets/icons/footer-socials/INSTAGRAM 1CORREO.png'
+            "
+            [hover]="
+              '../../../../assets/icons/footer-socials/INSTAGRAM 2CORREO.png'
+            "
+            [caption]="'Instagram Logo'"
+          ></app-img-hover>
+        </div>
+        <div class="footer_social--tiktok">
+          <app-img-hover
+            [normal]="
+              '../../../../assets/icons/footer-socials/TIKTOK 1CORREO.png'
+            "
+            [hover]="
+              '../../../../assets/icons/footer-socials/TIKTOK 2CORREO.png'
+            "
+            [caption]="'Tik Tok Logo'"
+          ></app-img-hover>
+        </div>
+        <div class="footer_social--facebook">
+          <app-img-hover
+            [normal]="
+              '../../../../assets/icons/footer-socials/FACEBOOK 1CORREO.png'
+            "
+            [hover]="
+              '../../../../assets/icons/footer-socials/FACEBOOK 2CORREO.png'
+            "
+            [caption]="'Facebook Logo'"
+          ></app-img-hover>
+        </div>
+      </div>
+      <div class="footer_trademark">
+        @ <strong> {{ year }} BSC | Bubble Skin Care</strong> <br />
+        Todos los derechos reservados
+      </div>
+    </div>
+
+    <div class="footer__floatings">
+      <div class="footer__floating footer__floating--whatsapp"></div>
+      <div class="footer__floating footer__floating--support"></div>
+    </div>
+  </div>
+</div>

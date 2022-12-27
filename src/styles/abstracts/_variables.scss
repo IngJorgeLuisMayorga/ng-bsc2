@@ -1,10 +1,23 @@
 @import './colors';
 
+// Sizes
+$size-1: 12px;
+$size-2: 14px;
+$size-3: 16px;
+$size-4: 18px;
+$size-5: 22px;
+$size-6: 26px;
+$size-8: 26px;
+
 // fonts
 $font-bold: 900;
-$f-size-xs: 10px;
+$f-size-xxs: 10px;
+$f-size-xs: 12px;
 $f-size-s: 14px;
 $f-size-m: 16px;
+$f-size-l: 18px;
+$f-size-xl: 24px;
+$f-size-xxl: 28px;
 
 // container
 $container-w: 2000px;
@@ -31,3 +44,12 @@ $header-buttons-icons-w: 26px;
 $header-buttons-icons-h: 26px;
 
 $header-menu-links-top: (-500px);
+
+
+// Footer
+$footer-padding: 48px;
+$footer-margin: $size-4;
+$footer-logo-w: 180px;
+$footer-social-logos-w: 24px;
+$footer-social-margin-left: 48px;
+$footer-social-space-between: 48px;

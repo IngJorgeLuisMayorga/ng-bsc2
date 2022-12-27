@@ -3,12 +3,13 @@ $transition-img-hover__time-s : 0.1s;
 .img-hover{
     display: block;
     position: relative;
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 100%;
+    cursor: pointer;
 }
 .img-hover img{
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 100%;
 }
 .img-hover .normal{
     position: absolute;

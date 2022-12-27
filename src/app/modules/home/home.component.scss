@@ -1,0 +1,16 @@
+@import '../../../styles/abstracts/colors';
+
+.hero{
+    background-color: $color-pink;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../../../assets/images/home/home-cover-bg.png');
+    width: 100%;
+}
+
+.hero img{
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    object-position: center;
+}
