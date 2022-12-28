@@ -1,0 +1,53 @@
+@import '../../../../../styles/abstracts/colors';
+@import '../../../../../styles/abstracts/fonts';
+
+.product__container {
+  display: flex;
+  justify-content:space-between;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1em;
+  border-bottom: 1px dotted $color-black;
+}
+
+.product__picture {
+  width: calc(120px + 1em);
+  box-sizing: border-box;
+  padding-right: 1em;
+  img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    box-sizing: border-box;
+  }
+}
+
+
+.product__info{
+    @include font-default;
+    @include font-xs;
+    @include font-space-s;
+}
+
+.product__brand{
+    @include font-bold;
+}
+
+.product__title{
+    padding-bottom: $f-size-xs;
+}
+
+.product__price{
+    @include font-m;
+    @include font-bold;
+}
+
+.product__discount{
+    @include font-xxs;
+    text-decoration: line-through;
+    padding-bottom: $f-size-xs;
+}
+
+.product__quantity{
+
+}

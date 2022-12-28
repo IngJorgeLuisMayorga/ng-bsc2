@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { IBreadcrumb } from '@shared/models/Breadcrumbs.model';
 
 @Component({
   selector: 'app-layout-basic',
@@ -9,8 +10,7 @@ import { Router } from '@angular/router';
 export class LayoutBasicComponent {
 
   @Input()
-  breadcrumbs: any[] = [];
-
+  breadcrumbs: IBreadcrumb[] = [];
 
   @Input()
   title: string = '';

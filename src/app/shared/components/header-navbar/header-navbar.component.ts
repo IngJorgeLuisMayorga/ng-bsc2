@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { map, Observable, of } from 'rxjs';
+import { map, Observable, of, forkJoin , combineLatest} from 'rxjs';
+import { CartFacadeService } from 'src/app/modules/cart/services/cart-facade.service';
 const BASE = '../../../../assets/icons/header-navbar';
 
 export interface IHeaderNotification{
@@ -75,12 +76,17 @@ export class HeaderNavbarComponent {
   public $notificationsProfile: Observable<IHeaderNotification>;
   public $notificationsSearch: Observable<IHeaderNotification>;
 
-  constructor(){
-    this.$notifications = of([{
+  constructor(private cartFacade: CartFacadeService){
+
+    this.$notificationsCart = this.cartFacade.getProductsCount$().pipe(map(count => ({
       name: NotificationsNames.CART,
-      count: 10
-    }]);
-    this.$notificationsCart = this.getNotificationObsByName(NotificationsNames.CART);
+      count: count
+    })));
+
+    const obs:Array<Observable<any>> = [this.$notificationsCart, of([], of([]))];
+    this.$notifications = combineLatest(obs);
+
+    //this.$notificationsCart = this.getNotificationObsByName(NotificationsNames.CART);
     this.$notificationsProfile = this.getNotificationObsByName(NotificationsNames.PROFILE);
     this.$notificationsSearch = this.getNotificationObsByName(NotificationsNames.SEARCH);
   }
@@ -101,7 +107,7 @@ export class HeaderNavbarComponent {
     console.log('profile');
   }
   goToCart() {
-    console.log('cart');
+    this.cartFacade.toogleStatus();
   }
 
   getBadge(button: any, notifications: IHeaderNotification[] | null): number {

@@ -1,7 +1,8 @@
 <div class="header header-navbar desktop">
   <div class="header-navbar__waves">
-    <img [src]="waves"/>
+    <img [src]="waves" alt="Loge de olas para el simbolo de BSC"/>
   </div>
+
   <div class="header-navbar__menus">
     <div class="header-navbar__menu" *ngFor="let menu of menus">
       <div class="menu__title">
@@ -15,7 +16,7 @@
     </div>
   </div>
   <div class="header-navbar__buttons">
-      <img [src]="bsc"/>
+      <img [src]="bsc" [alt]="'BSC Logo'"/>
       <div class="header-navbar__button" *ngFor="let button of buttons">
             <app-img-hover
               (click)="button.method()"

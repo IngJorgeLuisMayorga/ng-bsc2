@@ -1,3 +1,5 @@
+import { IBreadcrumb } from "@shared/models/Breadcrumbs.model";
+
 export interface IProduct {
   id: number;
   updated_at: Date;
@@ -26,6 +28,12 @@ export interface IProduct {
     solution: ICategory;
     step: ICategory;
     extra: ICategory;
+  }
+
+  breadcrumbs:{
+    rutine: IBreadcrumb,
+    category: IBreadcrumb,
+    product: IBreadcrumb
   }
 }
 

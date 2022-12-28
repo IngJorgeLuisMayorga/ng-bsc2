@@ -1,25 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { IBreadcrumbs } from 'src/app/shared/models/Breadcrumbs.model';
+import { BreadcrumbsService } from '@shared/services/breadcrumbs.service';
+import { IBreadcrumb } from 'src/app/shared/models/Breadcrumbs.model';
 import { AuthService } from '../auth/services/auth.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
 
-  public breadcrumbs: IBreadcrumbs[] = [
-    {
-      path: '/',
-      text: 'Home'
-    }
-  ];
+  public breadcrumbs: IBreadcrumb[] = [];
 
-  constructor(){}
+  constructor(private $breadcrumbs: BreadcrumbsService) {}
 
   ngOnInit(): void {
+    this.breadcrumbs = this.$breadcrumbs.getNone();
     //this.$auth.mockLogin('RoleAdmin');
   }
-
 }

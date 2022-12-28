@@ -12,6 +12,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SidebarCartComponent } from './components/sidebar-cart/sidebar-cart.component';
 import { ImgHoverComponent } from './components/img-hover/img-hover.component';
 import { RouterModule } from '@angular/router';
+import { CardItemProductComponent } from './components/cards/card-item-product/card-item-product.component';
+import { InputQuantityComponent } from './components/inputs/input-quantity/input-quantity.component';
 
 
 const COMPONENTS = [
@@ -30,7 +32,9 @@ const COMPONENTS = [
 
 @NgModule({
   declarations: [
-    ...COMPONENTS
+    ...COMPONENTS,
+    CardItemProductComponent,
+    InputQuantityComponent
   ],
   exports: [
     ...COMPONENTS

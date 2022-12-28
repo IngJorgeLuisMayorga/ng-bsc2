@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartStoreService } from './modules/cart/services/cart-store.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ngBSC';
+  constructor(private cartStore: CartStoreService){
+    this.cartStore.init();
+  }
 }

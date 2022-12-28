@@ -1,5 +1,5 @@
-export interface IBreadcrumbs{
-    active?: boolean;
+export interface IBreadcrumb{
+    active: boolean;
     path: string;
     text: string;
 }

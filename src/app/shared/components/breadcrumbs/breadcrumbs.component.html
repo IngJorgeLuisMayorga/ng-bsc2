@@ -1,1 +1,9 @@
-<p>breadcrumbs works!</p>
+<nav class="breadcrumbs" *ngIf="breadcrumbs">
+  <ul class="breadcrumbs__items">
+    <ng-container *ngFor="let item of breadcrumbs">
+        <li class="breadcrumbs__item" [ngClass]="{'active' : item.active}">
+            <a href="{{item.path}}">{{ item.text }}</a>
+        </li>
+    </ng-container>
+  </ul>
+</nav>

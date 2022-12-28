@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IBreadcrumb } from '@shared/models/Breadcrumbs.model';
 
 @Component({
   selector: 'app-breadcrumbs',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class BreadcrumbsComponent {
 
-}
+    @Input()
+    breadcrumbs:IBreadcrumb[] = [];
+
+
+
+  }

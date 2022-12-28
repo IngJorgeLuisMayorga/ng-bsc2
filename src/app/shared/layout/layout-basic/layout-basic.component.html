@@ -4,11 +4,11 @@
         <app-header-navbar></app-header-navbar>
         <app-header-admin></app-header-admin>
     </header>
-    <nav class="page-sidebar">
+    <aside class="page-sidebar">
         <app-sidebar-cart></app-sidebar-cart>
-    </nav>
+    </aside>
     <div class="page-container">
-        <app-breadcrumbs></app-breadcrumbs>
+        <app-breadcrumbs [breadcrumbs]="breadcrumbs" *ngIf="breadcrumbs && breadcrumbs.length > 0"></app-breadcrumbs>
         <ng-content select="main"></ng-content>
     </div>
     <footer class="page-footer">
