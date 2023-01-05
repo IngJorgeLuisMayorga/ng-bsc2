@@ -15,7 +15,6 @@ export enum ICartShippingStatus {
 
 // Cart
 export type ICart = {
-    status: ISideCartStatus;
     user: ICartUser;
     shipping: ICartShipping;
     overview: ICartOverview;
@@ -59,11 +58,14 @@ export type ICartProduct = {
 
 // Overview
 export type ICartOverview = {
-    total_points: number;
+    
     total_price: number;
-    shipping_price: number;
     taxes_price: number;
     subtotal_price: number;
+
+    total_points: number;
+
+    shipping_price: number;
     shipping_status:ICartShippingStatus;
     shipping_missing_to_free_amount: number; // 0 - 300K COP
     shipping_missing_to_free_percentage: number; // 0 - 100%
@@ -93,8 +95,6 @@ export type ICartUser = {
 }
 
 export const DefaultCart:ICart = {
-
-    status: ISideCartStatus.CLOSE,
 
     user: {
         id: 0,

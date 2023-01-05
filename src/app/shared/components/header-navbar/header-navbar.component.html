@@ -17,7 +17,7 @@
   </div>
   <div class="header-navbar__buttons">
       <img [src]="bsc" [alt]="'BSC Logo'"/>
-      <div class="header-navbar__button" *ngFor="let button of buttons">
+      <div class="header-navbar__button" *ngFor="let button of buttons" [id]="'btn-name-'+button.name">
             <app-img-hover
               (click)="button.method()"
               [caption]="button.icons.alt"

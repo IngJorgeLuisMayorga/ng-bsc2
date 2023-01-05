@@ -78,7 +78,7 @@ export class HeaderNavbarComponent {
 
   constructor(private cartFacade: CartFacadeService){
 
-    this.$notificationsCart = this.cartFacade.getProductsCount$().pipe(map(count => ({
+    this.$notificationsCart = this.cartFacade.getCount$().pipe(map(count => ({
       name: NotificationsNames.CART,
       count: count
     })));
@@ -107,7 +107,7 @@ export class HeaderNavbarComponent {
     console.log('profile');
   }
   goToCart() {
-    this.cartFacade.toogleStatus();
+    this.cartFacade.setToogleIsOpen();
   }
 
   getBadge(button: any, notifications: IHeaderNotification[] | null): number {

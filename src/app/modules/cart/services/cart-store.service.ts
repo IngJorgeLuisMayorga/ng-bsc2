@@ -37,15 +37,6 @@ export class CartStoreService {
     return this.cart$;
   }
 
-  public toogleStatus(){
-    const cart = this.getCart();
-    if(cart.status === ISideCartStatus.OPEN) {
-      cart.status = ISideCartStatus.CLOSE;
-    } else {
-      cart.status = ISideCartStatus.OPEN;
-    }
-    this.setCart(cart);
-  }
 
 
 }
