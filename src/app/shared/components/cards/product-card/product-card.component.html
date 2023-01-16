@@ -1,0 +1,45 @@
+<section class="card product__card" *ngIf="id && id > 0; else loading">
+  <div class="card__container">
+    <div class="product__picture">
+      <div class="picture__back"></div>
+      <div class="picture__front">
+          <app-img-lazy [src]="image" [thumb]="thumb"></app-img-lazy>
+      </div>
+    </div>
+    <div class="product__info">
+
+      <h1 class="product__price">
+        {{ discounted | currency : "$" : "symbol" : "2.0" }}
+      </h1>
+
+      <h1 class="product__subprice">
+        {{ price | currency : "$" : "symbol" : "2.0" }}
+      </h1>
+
+      <h1 class="product__title">
+        {{ title }} / <strong>{{ brand }}</strong>
+      </h1>
+
+      <div class="product__dotedline">
+      </div>
+
+      <app-button-product-add></app-button-product-add>
+      <app-button-favorite-add></app-button-favorite-add>
+    
+      <div class="product__quantity">
+        <app-input-quantity
+          [count]="($quantity | async) || 0"
+          (up)="quantityUp()"
+          (down)="quantityDown()"
+          (delete)="quantityRemove()"
+        ></app-input-quantity>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ng-template #loading>
+  <section class="card product__card">
+    <h1>CARD LOADING</h1>
+  </section>
+</ng-template>

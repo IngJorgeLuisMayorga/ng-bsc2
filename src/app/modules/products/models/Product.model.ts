@@ -5,22 +5,23 @@ export interface IProduct {
   updated_at: Date;
   created_at: Date;
 
-  sku: number;
-  name: string;
+  sku: string;
+  title: string;
   visible: boolean;
 
   brand: string;
   description: string;
   ingredients: string;
 
-  image1_src: URL;
-  image2_src: URL;
-  image3_src: URL;
-  image4_src: URL;
+  image1_src: string;
+  image2_src: string;
+  image3_src: string;
+  image4_src: string;
 
   price: number;
   discount: number;
   stock: number;
+  quantity: number;
 
   categories: {
     skin: ICategory;

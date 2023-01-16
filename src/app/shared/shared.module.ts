@@ -14,6 +14,11 @@ import { ImgHoverComponent } from './components/img-hover/img-hover.component';
 import { RouterModule } from '@angular/router';
 import { CardItemProductComponent } from './components/cards/card-item-product/card-item-product.component';
 import { InputQuantityComponent } from './components/inputs/input-quantity/input-quantity.component';
+import { ProductCardComponent } from './components/cards/product-card/product-card.component';
+import { InputProductQuantityComponent } from './components/inputs/input-product-quantity/input-product-quantity.component';
+import { ImgLazyComponent } from './components/img-lazy/img-lazy.component';
+import { ButtonProductAddComponent } from './components/buttons/button-product-add/button-product-add.component';
+import { ButtonFavoriteAddComponent } from './components/buttons/button-favorite-add/button-favorite-add.component';
 
 
 const COMPONENTS = [
@@ -27,14 +32,18 @@ const COMPONENTS = [
   BreadcrumbsComponent,
   FooterComponent,
   SidebarCartComponent,
-  ImgHoverComponent
+  ImgHoverComponent,
+  CardItemProductComponent,
+  InputQuantityComponent,
+  ProductCardComponent,
+  InputProductQuantityComponent,
+  ImgLazyComponent,
+  ButtonProductAddComponent,
+  ButtonFavoriteAddComponent,
 ];
-
 @NgModule({
   declarations: [
-    ...COMPONENTS,
-    CardItemProductComponent,
-    InputQuantityComponent
+    ...COMPONENTS
   ],
   exports: [
     ...COMPONENTS

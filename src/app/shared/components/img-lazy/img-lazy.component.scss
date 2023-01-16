@@ -1,0 +1,26 @@
+img {
+  display: block;
+  position: absolute;
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: all 500ms;
+}
+img.hide {
+  opacity: 0;
+  width: 100%;
+}
+.thumb {
+  filter: blur(10px);
+}
+.image {
+  filter: blur(0px);
+}
+.image.hide {
+  filter: blur(10px);
+}
+.thumb.hide {
+  filter: blur(0px);
+}

@@ -1,0 +1,23 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { ImgLazyComponent } from './img-lazy.component';
+
+describe('ImgLazyComponent', () => {
+  let component: ImgLazyComponent;
+  let fixture: ComponentFixture<ImgLazyComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ ImgLazyComponent ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(ImgLazyComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

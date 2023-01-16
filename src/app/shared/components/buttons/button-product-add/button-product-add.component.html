@@ -1,0 +1,7 @@
+<button class="button button__product_add button__product_add--when-no-cart" *ngIf="!isWhenCart()">
+    <h1>{{ whenNoCart.text }}</h1>
+</button>
+
+<button class="button button__product_add button__product_add--when-cart" *ngIf="isWhenCart()">
+    <h1>{{ whenCart.text }}</h1>
+</button>

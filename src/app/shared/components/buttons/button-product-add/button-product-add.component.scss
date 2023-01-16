@@ -1,0 +1,23 @@
+@import '../../../../../styles/abstracts/variables';
+@import '../../../../../styles/abstracts/colors';
+
+.button__product_add {
+
+    //Fonts
+    @include font-default;
+    @include font-m;
+    @include font-space-l;
+
+    //Box
+    display: block;
+    box-sizing: border-box;
+    padding: 0em;
+
+    //Text
+    text-align: center;
+
+    //Colors
+    color: $color-white;
+    background-color: $color-black;
+
+}

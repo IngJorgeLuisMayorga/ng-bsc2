@@ -42,6 +42,16 @@ export class CartFacadeService {
   getTaxes$(): Observable<ICartProduct[]>{
     return this.cart$.pipe(map(cart => cart.products));
   }
+  getQuantityByProductId$(productId: number): Observable<number>{
+    return this.cart$.pipe(
+      map((cart: ICart) => {
+        const products = cart.products;
+        const product = products.find(item => item.id === productId);
+        const quantity = product?.quantity;
+        return quantity || 0;
+      })
+    );
+  }
 
 
   // UI Settings 

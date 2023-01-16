@@ -1,3 +1,4 @@
+import { IProduct } from "../../products/models/Product.model";
 
 export const FREE_SHIPPING_AMOUNT = 300000;
 
@@ -29,32 +30,36 @@ export type ICart = {
 // Products
 export type ICartProduct = {
     id: number,
-    sku: string;
-    slug: string;
-
-    created_at: string;
-    updated_at: string;
-
-    shop_type: string;
 
     title: string;
     brand: string;
     description: string;
-    ingredients: string;
-    image1_src: string;
-    image2_src: string;
-    image3_src: string;
-    image4_src: string;
+    image: string;
 
     price:  number,
     discount: number,
     quantity:  number,
     stock:  number,
 
-    isDuo: boolean,
-    productA_id: any,
-    productB_id: any
 };
+
+
+export function toCartProduct(product: IProduct): ICartProduct{
+    return {
+        id: product.id,
+    
+        title: product.title,
+        brand: product.brand,
+        description: product.description,
+
+        image: product.image1_src,
+    
+        price:  product.price,
+        discount: product.discount,
+        quantity:  product.quantity,
+        stock:  product.stock
+    }
+}
 
 // Overview
 export type ICartOverview = {

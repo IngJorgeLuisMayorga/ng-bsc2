@@ -3,15 +3,15 @@
         <label>{{ count }}</label>
     </div>
     <div class="input-quantity__buttons">
-        <button class="button--minus">
+        <button class="button--minus" (click)="onDown()">
             <label>-</label>
         </button>
-        <button class="button--plus">
+        <button class="button--plus" (click)="onUp()">
             <label>+</label>
         </button>
     </div>
     <div class="input-quantity__delete">
-        <button class="button--delete">
+        <button class="button--delete" (click)="onDelete()">
             eliminar
         </button>
     </div>

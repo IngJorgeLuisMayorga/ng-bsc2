@@ -30,10 +30,7 @@ export class SidebarCartComponent {
     const targetNodeIds = $event.path.map((item: HTMLElement) => item.id);
     const isTargetSideCart = (targetNodeNames.includes(SIDECART_NODENAME)) || (targetNodeIds.includes(NAVBAR_BUTTON_ID));
     if(!isTargetSideCart){
-      console.log('Closing!')
       this.doClose();
-    } else{
-      console.log('No Closing');
     }
   }
 

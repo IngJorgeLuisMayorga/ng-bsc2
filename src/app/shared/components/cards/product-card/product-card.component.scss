@@ -1,0 +1,129 @@
+@import "../../../../../styles/abstracts/colors";
+@import "../../../../../styles/abstracts/fonts";
+@import "../../../../../styles/abstracts/variables";
+
+.card {
+  display: block;
+  width: $card-w;
+  height: $card-h;
+}
+
+.card__product {
+  display: block;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+.card__container {
+}
+
+.product__picture {
+  display: block;
+  width: 100%;
+  height: $card-picture-h + $card-offset;
+  position: relative;
+}
+
+.picture__front {
+  display: block;
+  position: absolute;
+
+  background-color: white;
+
+  top: 0em;
+  left: 0em;
+
+  width: calc(100% - $card-offset);
+  height: $card-picture-h;
+
+  border: 1px solid $color-black;
+
+  img {
+    width: 100%;
+    height: $card-picture-h;
+    object-fit: contain;
+    box-sizing: border-box;
+  }
+}
+.picture__back {
+  display: block;
+  position: absolute;
+
+  top: $card-offset;
+  left: $card-offset;
+
+  width: calc(100% - $card-offset);
+  height: $card-picture-h;
+
+  border: 1px solid $color-black;
+}
+
+.product__info {
+  display: block;
+  margin-top: $card-offset;
+}
+
+
+.product__price {
+
+  //Fonts
+  @include font-default;
+  @include font-xl;
+  @include font-bold;
+  @include font-space-s;
+
+  text-align: center;
+
+  // Box
+  margin: 0;
+  padding: 0;
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  //Theme
+  color: $color-black;
+}
+
+.product__subprice {
+
+  //Fonts
+  @include font-default;
+  @include font-s;
+  @include font-space-s;
+
+  text-align: center;
+  text-decoration: line-through;
+
+  // Box
+  margin: 0;
+  padding: 0;
+
+  //Theme
+  color: $color-black;
+
+}
+
+.product__title{
+   //Fonts
+   @include font-default;
+   @include font-xxs;
+   @include font-space-s;
+ 
+   text-align: center;
+ 
+   // Box
+   margin: 0;
+   padding: 0;
+   padding-top: 1em;
+   padding-bottom: 1em;
+ 
+   //Theme
+   color: $color-black;
+}
+
+.product__dotedline{
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dotted $color-black;
+  margin: 1em 0em;
+}
